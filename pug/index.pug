@@ -1,0 +1,32 @@
+doctype html
+html(lang="ru")
+	head
+		include utils/meta
+		link(rel="stylesheet", href="css/style.min.css")
+		link(rel="shortcut icon", href="files/favicon.ico")
+		include utils/fonts
+		title Main Page
+	body
+		include components/header
+
+		.wrapper
+			button.btnAnim Запустить анимации
+			.block-wrapper
+				.block.red 
+				.block.blue 
+				.block.green 
+				.block.yellow 
+			.small-block-wrapper
+				.small-block
+				.small-block
+				.small-block
+				.small-block
+				.small-block
+				.small-block
+				.small-block
+				.small-block
+			.text-block-wrapper
+				.text-block Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ipsa repellendus distinctio iusto. Laborum amet sed, quod sequi, eos illo dolor labore voluptatem expedita est animi tempore, alias dolorem assumenda.
+
+		include components/footer
+		script(src='js/app.min.js')

@@ -1,0 +1,94 @@
+//	Если шрифты подключили локально, то они автоматически конвертируются и попадут в файл fonts.sass, 
+//	тогда расскоментировать строчку ниже
+// @import utils/fonts
+
+// При подключении шрифтов через Google Fonts, ломается импорт в скомпиленном css файле,
+// Google fonts поменяли что-то в API, и теперь их ссылки конфликтуют с минимайзерами и компиляторами.
+// Для решения проблемы можно подключить шрифты через link в pug файле
+@import utils/reset
+@import utils/mixins
+@import utils/global
+@import components/header
+@import components/footer
+
+.wrapper
+	width: 100%
+	padding: 50px 100px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	gap: 50px
+	position: relative
+.block
+	width: 500px
+	height: 200px
+
+.red
+	background-color: tomato
+.blue
+	background-color: #1720a0
+.green
+	background-color: #48b11f
+.yellow
+	background-color: #9ea017
+
+.small-block
+	width: 200px
+	height: 200px
+	background-color: plum
+	justify-self: center
+
+.text-block
+	background-color: whitesmoke
+	font-size: 40px
+	padding: 20px
+	width: 700px
+	border-radius: 15px
+
+.block-wrapper
+	width: 100%
+	padding: 100px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	gap: 20px
+	background-color: #5a5a5a
+.small-block-wrapper
+	width: 100%
+	padding: 100px
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	gap: 20px
+	background-color: #3d3d3d
+
+.text-block-wrapper
+	width: 100%
+	padding: 100px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	gap: 20px
+	background-color: #777777
+
+.btnAnim
+	border: none
+	font-size: 20px
+	font-weight: 500
+	padding: 20px 30px
+	background-color: $color-black
+	color: $color-white
+	position: fixed
+	z-index: 1000
+	top: 0
+	left: 50%
+	transform: translateX(-50%)
+	transition: $transition
+	&:hover
+		background-color: #8d3939
+		color: $color-black
+	&:active
+		transform: translateX(-50%) translateY(5px)
+		box-shadow: 5px 5px 16px 0px rgba(34, 60, 80, 0.8) inset
